@@ -26,7 +26,7 @@ export default function Hero() {
         <div className="hero__text">
           <h1 className="hero__title">Laat ruimte groeien.</h1>
           <p className="hero__subtitle">
-            Groene Vingers brengt tuineigenaars en tuinliefhebbers samen om ongebruikte tuinen nieuw leven te geven.
+            Groene Vingers verbindt tuineigenaars met mensen die willen tuinieren. Zo krijgen ongebruikte tuinen opnieuw een plek waar mensen kunnen tuinieren, leren en groeien.
           </p>
         </div>
         <div className="hero__actions">
@@ -38,7 +38,7 @@ export default function Hero() {
               <input
                 type="text"
                 className="hero__search-input"
-                placeholder="Zoek een tuin in jou buurt"
+                placeholder="Zoek een tuin in jouw buurt"
               />
             </div>
             <span className="hero__search-button">
@@ -46,7 +46,7 @@ export default function Hero() {
             </span>
           </div>
           <div className="hero__buttons">
-            <Button variant="primary" onClick={showToast}>Registreer nu</Button>
+            <Button variant="primary" onClick={() => window.open('https://t.maze.co/483947609', '_blank')}>Ontdek de app</Button>
             <Button variant="secondary" onClick={() => document.getElementById('hoe-werkt-het')?.scrollIntoView({ behavior: 'smooth' })}>Hoe werkt het?</Button>
           </div>
         </div>

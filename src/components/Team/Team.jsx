@@ -8,19 +8,19 @@ const members = [
   {
     name: 'Arno Van Abbenyen',
     role: 'UX/UI Design & research',
-    bio: 'Transforms ESG data into clear dashboards, KPIs and decisision-ready insights',
+    bio: 'Zet gebruikersinzichten om in intuïtieve interfaces, duidelijke flows en betekenisvolle ervaringen',
     photo: photoArno,
   },
   {
     name: 'Arthur De Klerck',
     role: 'UX/UI Design & marketing',
-    bio: 'Transforms ESG data into clear dashboards, KPIs and decisision-ready insights',
+    bio: 'Verbindt gebruiksvriendelijk design met marketing om sterke en herkenbare digitale ervaringen te creëren',
     photo: photoArthur,
   },
   {
     name: 'Victor Thys',
     role: 'UX/UI Testing & Full-stack Development',
-    bio: 'Transforms ESG data into clear dashboards, KPIs and decisision-ready insights',
+    bio: 'Test en ontwikkelt digitale producten om stabiele, gebruiksvriendelijke ervaringen te garanderen.',
     photo: photoVictor,
   },
 ]

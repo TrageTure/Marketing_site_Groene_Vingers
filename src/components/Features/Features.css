@@ -20,19 +20,21 @@
 .features__grid-border {
   border: var(--border-width-regular) solid var(--border-secondary);
   border-radius: var(--radius-xxlarge);
-  padding: 42px 35px;
+  overflow: hidden;
 }
 
 .features__grid {
   display: flex;
   flex-direction: column;
-  gap: 92px;
 }
 
 .features__row {
   display: flex;
   justify-content: space-between;
-  gap: var(--space-800);
+}
+
+.features__row + .features__row {
+  border-top: 1px solid var(--border-secondary);
 }
 
 .features__item {
@@ -41,6 +43,11 @@
   align-items: flex-start;
   flex: 1;
   min-width: 0;
+  padding: 46px 35px;
+}
+
+.features__item + .features__item {
+  border-left: 1px solid var(--border-secondary);
 }
 
 .features__item-number {

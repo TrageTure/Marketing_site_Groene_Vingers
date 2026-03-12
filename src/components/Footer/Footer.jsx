@@ -6,6 +6,15 @@ import iconLocation from '../../assets/b069155a30e7b9064b32a6df1832e4c932be061b.
 import './Footer.css'
 
 export default function Footer() {
+  const scrollTo = (id) => (e) => {
+    e.preventDefault()
+    if (id === 'top') {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <footer className="footer">
       <div className="footer__bg">
@@ -17,33 +26,33 @@ export default function Footer() {
         </div>
         <div className="footer__right">
           <nav className="footer__nav">
-            <a href="#" className="footer__nav-link">Home</a>
-            <a href="#zoek" className="footer__nav-link">Zoek een tuin</a>
-            <a href="#hoe-werkt-het" className="footer__nav-link">Hoe werkt het?</a>
-            <a href="#over-ons" className="footer__nav-link">Over ons</a>
+            <a href="#" className="footer__nav-link" onClick={scrollTo('top')}>Home</a>
+            <a href="#contact" className="footer__nav-link" onClick={scrollTo('contact')}>Zoek een tuin</a>
+            <a href="#hoe-werkt-het" className="footer__nav-link" onClick={scrollTo('hoe-werkt-het')}>Hoe werkt het?</a>
+            <a href="#over-ons" className="footer__nav-link" onClick={scrollTo('over-ons')}>Over ons</a>
           </nav>
           <div className="footer__divider" />
           <div className="footer__contact">
-            <div className="footer__contact-item">
+            <a className="footer__contact-item" href="mailto:info@groenevingers.be">
               <div className="footer__contact-icon">
                 <img src={iconMail} alt="" />
               </div>
               <span className="footer__contact-text">info@groenevingers.be</span>
-            </div>
-            <div className="footer__contact-item">
+            </a>
+            <a className="footer__contact-item" href="tel:+32456323861">
               <div className="footer__contact-icon">
                 <img src={iconPhone} alt="" />
               </div>
               <span className="footer__contact-text">+32 456 32 38 61</span>
-            </div>
-            <div className="footer__contact-item footer__contact-item--top">
+            </a>
+            <a className="footer__contact-item footer__contact-item--top" href="https://maps.google.com/?q=Merbeekstraat+1,+3360+Bierbeek" target="_blank" rel="noopener noreferrer">
               <div className="footer__contact-icon">
                 <img src={iconLocation} alt="" />
               </div>
               <span className="footer__contact-text footer__contact-text--multiline">
                 {`Merbeekstraat 1,\n3360 Bierbeek`}
               </span>
-            </div>
+            </a>
           </div>
         </div>
       </div>

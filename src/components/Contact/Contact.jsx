@@ -9,10 +9,10 @@ import plantIcon from '../../assets/8d75e753870d5d6108adfc829bb72987b196736f.svg
 import './Contact.css'
 
 const contactItems = [
-  { icon: iconMail, text: 'info@groenevingers.be' },
-  { icon: iconPhone, text: '+32 456 32 38 61' },
+  { icon: iconMail, text: 'info@groenevingers.be', href: 'mailto:info@groenevingers.be' },
+  { icon: iconPhone, text: '+32 456 32 38 61', href: 'tel:+32456323861' },
   { icon: iconDownload, text: 'Download het onderzoeksrapport' },
-  { icon: iconTest, text: 'Test het product' },
+  { icon: iconTest, text: 'Test het product', href: 'https://t.maze.co/483947609' },
 ]
 
 export default function Contact() {
@@ -60,7 +60,7 @@ export default function Contact() {
   }, [submitted])
 
   return (
-    <section className="contact">
+    <section id="contact" className="contact">
       <div className="contact__inner">
         <div className="contact__left">
           <SectionHeader
@@ -70,14 +70,25 @@ export default function Contact() {
             wide
           />
           <div className="contact__info-list">
-            {contactItems.map((item, i) => (
-              <div className="contact__info-item" key={i}>
-                <div className="contact__info-icon">
-                  <img src={item.icon} alt="" />
+            {contactItems.map((item, i) => {
+              const content = (
+                <>
+                  <div className="contact__info-icon">
+                    <img src={item.icon} alt="" />
+                  </div>
+                  <span className="contact__info-text">{item.text}</span>
+                </>
+              )
+              return item.href ? (
+                <a className="contact__info-item" href={item.href} key={i}>
+                  {content}
+                </a>
+              ) : (
+                <div className="contact__info-item" key={i}>
+                  {content}
                 </div>
-                <span className="contact__info-text">{item.text}</span>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
         <div className="contact__right">

@@ -13,7 +13,7 @@ export default function CTA() {
         </div>
         <div className="cta__buttons">
           <Button variant="light">Ontdek het platform</Button>
-          <Button variant="outline-light">Neem contact op</Button>
+          <Button variant="outline-light" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>Neem contact op</Button>
         </div>
       </div>
     </section>
